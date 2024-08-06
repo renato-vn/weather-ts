@@ -16,9 +16,9 @@ const App = () => {
         <Form fetchWeather={fetchWeather} />
         <div className={styles.commonContainer}>
           {loading && <Spinner />}
+          {hasWeatherData && <WeatherDetails weather={weather} />}
           {notFound && <Alert>Ciudad no encontrada.</Alert>}
         </div>
-        {hasWeatherData && <WeatherDetails weather={weather} />}
       </div>
     </>
   );
